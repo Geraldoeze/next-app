@@ -1,9 +1,15 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
 
 export default function Home() {
   return (
-   <h1 className='text-4xl underline'> Helloo</h1>
+    <>
+      <Head>
+        <title> Next-App</title>
+        <meta name="viewport" content="width=device-width"/>
+      </Head>
+      <div className=' bg-zinc-800 text-gray-50 h-screen overflow-y-scroll '>
+       
+      </div>  
+    </>
   )
 }
