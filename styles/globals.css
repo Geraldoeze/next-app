@@ -10,3 +10,7 @@
 .dropdown {
     display: block;
 }
+
+body{
+    background-color: rgb(39, 39, 49);
+}
