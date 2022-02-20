@@ -4,7 +4,7 @@ const Header = () => {
     return ( 
         <div className="block w-full">
             <div className="flex p-1 bg-black text-white  "  >
-                <h2 className="mx-3 text-3xl md: mx-8"> Edvora </h2>
+                <h2 className="mx-3 text-4xl  "> Edvora </h2>
                
                 <p className="ml-auto m-3 mx-6 flex md: mx-8" > Dhruv Singh 
                 <svg xmlns="http://www.w3.org/2000/svg" className=" ml-2 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

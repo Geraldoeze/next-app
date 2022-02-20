@@ -2,7 +2,6 @@ import React from 'react';
 
 const Views = ({ data }) => {
     const rides = data
-    console.log(rides)
 
     return ( 
     <div>
@@ -17,23 +16,23 @@ const Views = ({ data }) => {
   
         return(
 
-      <div key={id} className='flex flex-wrap  my-8 w-11/12 m-auto bg-zinc-900 p-6 rounded-xl'>
-          <div className='w-60'>
+      <div key={id} className='flex flex-wrap m-auto my-4 bg-zinc-900 rounded-xl w-11/12 overflow-x-auto'>
+          <div className='w-32'>
            <img src="https://image.shutterstock.com/image-vector/flat-street-map-direction-gps-600w-1661529616.jpg"
-            alt='map' className='rounded-xl w-40'/>
+            alt='map' className='rounded-xl m-4 w-20'/>
           </div>
-          <div className='block mx-6 w-2/5 m-4'>
+          <div className='sm:w-40 text-sm my-4 md:text-xl w-60'>
             <p>Ride Id: {val.id}</p>
             <p>Origin Station: {val.origin_station_code}</p>
             <p>station_path: [{ stationArray}]</p>
-            <p>Date:{val.date}</p>
+            <p>Date:{(new Date(val.date)).toLocaleDateString('en-US')}</p>
             <p>Distance: {val.distance}</p>
              
           </div>
-          <div className='w-80'>
-            <ul className='flex '>
-              <li className='mx-8 px-2 rounded-xl bg-black'>City Name</li>
-              <li className='mx-6 px-2 rounded-xl bg-black'>State Name</li>
+          <div className='w-10 my-4'>
+            <ul className='flex text-center'>
+              <li className='mx-2 px-1 rounded-xl bg-black'>City Name</li>
+              <li className='mx-2 px-1 rounded-xl bg-black'>State Name</li>
             </ul>
           </div>  
       </div>
