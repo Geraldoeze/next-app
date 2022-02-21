@@ -1,22 +1,21 @@
 import React from "react";
 import styles from '../styles/Home.module.css';
+import ButtonGroup from "./Button";
 import DrawerToogle from "./draw";
-import Filter from "./filter";
 
 const Controls = (props) => {
     let attachedClasses = ["dropup"];
     if(props.open) {
         attachedClasses = ["dropdown"];
     }
-console.log(props)
     return ( 
         <div className={styles.controls}>
-            <div className={styles.ride}>
-                <button>Nearest rides</button>
-                <button>Upcoming rides</button>
-                <button>Past rides</button>
-
-            </div>
+            <ButtonGroup 
+                updateD={props.dates}
+                buttons={[
+                    "Nearest rides", "Upcoming rides(4)", "Past rides(2)"
+                ]}
+            />
             <div className={styles.dropdown}>
                 <DrawerToogle clicked={props.drawerTogged} />
                 <button className={styles.dropbtn} onClick={props.drawerTogged}>
@@ -36,7 +35,7 @@ console.log(props)
                         <option  className={styles.option} value="City" disabled displayvalue="City" >City</option>
                         <option className={styles.option}  value="1" >Kano</option>
                     </select>
-                    <Filter />
+                    
                   </div>  
                 </div>
             </div>

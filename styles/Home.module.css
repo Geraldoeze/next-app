@@ -8,9 +8,11 @@ height: 20%;
 
 .ride {
 display: flex;
+
 }
 .ride button {
-  margin: 0 5px;
+  margin: 0px 15px;
+
 }
 /*  Styles for the dropdown */
 
@@ -21,7 +23,7 @@ display: flex;
   font-size: 16px;
   border: none;
   display: flex;
-  
+  margin-right: 10px ;
   cursor: pointer;
 }
 
@@ -70,13 +72,4 @@ display: flex;
   margin: 8px 6px
 }
 
-.option:default {
-  color: rgb(211, 174, 96);
-}
- 
 
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  /* background-color: #8b8f8b; */
-}

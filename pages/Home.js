@@ -67,11 +67,18 @@ const Holder =() => {
         })
         }
         NewRides3(code);
-        console.log(DrawerClosedHandler)
+        
+        const updateDates = () => {
+            //function that updates the views to upcoming and past dates
+            console.log('clicked');
+        }
+
+
         return (
             <div>
                 <Header />
                 <Controls 
+                    dates={updateDates}
                     open={showFilterDrawer}
                     closed={DrawerClosedHandler}
                     drawerTogged={DrawerToggleHandler} />
