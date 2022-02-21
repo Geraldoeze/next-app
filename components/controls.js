@@ -2,8 +2,12 @@ import React from "react";
 import styles from '../styles/Home.module.css';
 import ButtonGroup from "./Button";
 import DrawerToogle from "./draw";
+import { Rider } from "../data/data";
 
 const Controls = (props) => {
+    const places = [Rider[0]];
+
+
     let attachedClasses = ["dropup"];
     if(props.open) {
         attachedClasses = ["dropdown"];
@@ -25,18 +29,27 @@ const Controls = (props) => {
                     Filter
                 </button>
                 <div className={styles.dropdownList}>
-                  <div className={attachedClasses}>
-                    <label className={styles.label} htmlFor="filter">filters</label>
-                    <select className={styles.list} >
-                        <option className={styles.option} value="State"  >State</option>
-                        <option className={styles.option} value="1" >Missi</option>
-                    </select>
-                    <select className={styles.list} >
-                        <option  className={styles.option} value="City" disabled displayvalue="City" >City</option>
-                        <option className={styles.option}  value="1" >Kano</option>
-                    </select>
-                    
-                  </div>  
+                  
+                  { 
+                      places.map((e, id) => {
+
+                      return (
+                    <div key={id} className={attachedClasses}>
+                          <label className={styles.label} htmlFor="filter">filters</label>
+                        <select className={styles.list} >
+                            <option className={styles.option} value="State"  >State</option>
+                            <option className={styles.option} value="1" >{e.state}</option>
+                        </select>
+                        <select className={styles.list} >
+                            <option  className={styles.option} value="City"  >City</option>
+                            <option className={styles.option}  value='1' >{e.city}</option>
+                        </select>
+                    </div> 
+                        
+                      )
+                  })
+                  }
+                   
                 </div>
             </div>
 

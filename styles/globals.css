@@ -30,13 +30,14 @@ body{
 /* Button styles */
 
 .customButton {
-    
+    width: 70%;
     letter-spacing: 0.5px;
     background-color: rgba(39, 39, 49, 0);
     color: white;
     font-size: 18px;
     cursor: pointer;
     }
+
   
   .active{
     border-bottom: 2px solid white;
@@ -109,4 +110,5 @@ body{
         font-size: small;
         width: 50%;
     }
+   
 }
